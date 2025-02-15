@@ -37,9 +37,13 @@ const shapeSlice = createSlice({
     selectShape: (state, action: PayloadAction<string | null>) => {
       state.selectedShapeId = action.payload;
     },
+    clearShapes: (state) => {
+      state.shapes = [];
+      state.selectedShapeId = null;
+    },
   },
 });
 
-export const { addShape, updateShape, removeShape, selectShape } =
+export const { addShape, updateShape, removeShape, selectShape, clearShapes } =
   shapeSlice.actions;
 export default shapeSlice.reducer;

@@ -15,5 +15,10 @@ export const usePDF = () => {
     setPageSize(size);
   };
 
-  return { pdfFile, pageSize, handleFileUpload, handlePageLoad };
+  const clearPDF = () => {
+    setPdfFile(null);
+    setPageSize({ width: 0, height: 0 });
+  };
+
+  return { pdfFile, pageSize, handleFileUpload, handlePageLoad, clearPDF };
 };

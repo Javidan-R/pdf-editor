@@ -7,7 +7,7 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 // PDF.js worker yolunu təyin edirik
 pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.js";
 
-const PDFViewer: React.FC<PDFViewerProps> = ({ file, onLoadSuccess }) => {
+export const PDFViewer: React.FC<PDFViewerProps> = ({ file, onLoadSuccess }) => {
   const [numPages, setNumPages] = useState<number>(0);
 
   // onLoadSuccess funksiyasını memoize edirik ki, re-render zamanı dəyişməsin
